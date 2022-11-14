@@ -13,13 +13,17 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import LabelImportantIcon from '@mui/icons-material/LabelImportant';
 import SidebarOptions from './SidebarOptions';
 import './Sidebar.css';
+import { useDispatch } from 'react-redux';
+import { openSendMessage } from '../../../features/mailSlice';
 
 const Sidebar = () => {
+  const dispatch = useDispatch(openSendMessage);
   return (
     <div className='Sidebar'>
       <Button
         startIcon={<AddIcon fontSize='large' />}
         className='sidebar-compose'
+        onClick={() => dispatch(openSendMessage())}
       >
         COMPOSE
       </Button>
