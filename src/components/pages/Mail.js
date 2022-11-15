@@ -15,7 +15,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import { IconButton } from '@mui/material';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { selectOpenMail } from '../../../features/mailSlice';
+import { selectOpenMail } from '../../features/mailSlice';
 import './Mail.css';
 
 const Mail = () => {

@@ -12,7 +12,7 @@ import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import KeyboardHideIcon from '@mui/icons-material/KeyboardHide';
 import Section from './Section';
 import EmailRow from './EmailRow';
-import { db } from '../../../firebase';
+import { db } from '../../../db/firebase';
 import { getDocs, collection } from 'firebase/firestore';
 import './EmailList.css';
 
@@ -31,8 +31,6 @@ const EmailList = () => {
       });
     });
   };
-
-  console.log(emails);
 
   useEffect(() => {
     setLoading(true);
@@ -101,19 +99,6 @@ const EmailList = () => {
             );
           })
         )}
-
-        <EmailRow
-          title='Gmail'
-          description='This is a test'
-          subject='Lets create gmail app'
-          time='7am'
-        />
-        <EmailRow
-          title='Gmail'
-          description='This is a test'
-          subject='Lets create gmail app'
-          time='7am'
-        />
       </div>
     </div>
   );

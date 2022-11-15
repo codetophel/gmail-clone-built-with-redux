@@ -3,6 +3,17 @@
   overflow: scroll;
 }
 
+/* hide scrollbar for chrome */
+.emailList::-webkit-scrollbar {
+  display: none;
+}
+
+/* hide for other browsers */
+.emailList {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 .emailList-settings {
   display: flex;
   justify-content: space-between;
@@ -23,4 +34,8 @@
   align-items: center;
   border-bottom: 1px solid whitesmoke;
   background: white;
+}
+
+.emailList-list {
+  padding-bottom: 20%;
 }

@@ -4,9 +4,9 @@ import { useForm } from 'react-hook-form';
 import { ErrorMessage } from '@hookform/error-message';
 import './SendMail.css';
 import { useDispatch } from 'react-redux';
-import { closeSendMessage } from './features/mailSlice';
+import { closeSendMessage } from '../../../features/mailSlice';
 import { collection, addDoc } from 'firebase/firestore';
-import { db } from './firebase';
+import { db } from '../../../db/firebase';
 
 const SendMail = () => {
   const dispatch = useDispatch(closeSendMessage);
