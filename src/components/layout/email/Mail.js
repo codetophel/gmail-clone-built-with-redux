@@ -13,10 +13,13 @@ import {
 } from '@mui/icons-material';
 import EmailIcon from '@mui/icons-material/Email';
 import { IconButton } from '@mui/material';
+import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { selectOpenMail } from '../../../features/mailSlice';
 import './Mail.css';
 
 const Mail = () => {
+  const selectedMail = useSelector(selectOpenMail);
   const navigate = useNavigate();
   return (
     <div className='Mail'>
@@ -66,13 +69,13 @@ const Mail = () => {
 
       <div className='mail-body'>
         <div className='mail-body-header'>
-          <h2>Subject</h2>
+          <h2>{selectedMail?.subject}</h2>
           <LabelImportant className='mail-important' />
-          <p>Title</p>
-          <p className='mail-time'>10pm</p>
+          <p>{selectedMail?.to}</p>
+          <p className='mail-time'>{selectedMail?.time}</p>
         </div>
         <div className='mail-message'>
-          <p>This is the message content...</p>
+          <p>{selectedMail?.description}</p>
         </div>
       </div>
     </div>
