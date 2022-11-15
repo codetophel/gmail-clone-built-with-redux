@@ -27,6 +27,7 @@ const EmailList = () => {
         allMails.push({ id: doc.id, data: doc.data() });
         let res = allMails;
         setEmails(res);
+        return res;
       });
     });
   };
@@ -34,7 +35,9 @@ const EmailList = () => {
   console.log(emails);
 
   useEffect(() => {
+    setLoading(true);
     getEmails();
+    setLoading(false);
   }, []);
 
   if (loading || emails === null) return <h4>loading...</h4>;
@@ -82,7 +85,7 @@ const EmailList = () => {
       </div>
 
       <div className='emailList-list'>
-        {/* {!loading && emails.length === 0 ? (
+        {!loading && emails.length === 0 ? (
           <p>No mails in inbox</p>
         ) : (
           emails.map(({ id, data: { to, subject, message, timestamp } }) => {
@@ -93,11 +96,11 @@ const EmailList = () => {
                 title={to}
                 subject={subject}
                 description={message}
-                time={timestamp}
+                time={new Date(timestamp?.seconds * 1000).toUTCString()}
               />
             );
           })
-        )} */}
+        )}
 
         <EmailRow
           title='Gmail'
