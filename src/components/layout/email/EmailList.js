@@ -36,7 +36,7 @@ const EmailList = () => {
     setLoading(true);
     getEmails();
     setLoading(false);
-  }, []);
+  }, [emails]);
 
   if (loading || emails === null) return <h4>loading...</h4>;
 
@@ -99,6 +99,90 @@ const EmailList = () => {
             );
           })
         )}
+        <EmailRow
+          title='jay jay'
+          subject='check check'
+          message='chechk check check'
+          time='10am'
+        />{' '}
+        <EmailRow
+          title='jay jay'
+          subject='check check'
+          message='chechk check check'
+          time='10am'
+        />{' '}
+        <EmailRow
+          title='jay jay'
+          subject='check check'
+          message='chechk check check'
+          time='10am'
+        />{' '}
+        <EmailRow
+          title='jay jay'
+          subject='check check'
+          message='chechk check check'
+          time='10am'
+        />{' '}
+        <EmailRow
+          title='jay jay'
+          subject='check check'
+          message='chechk check check'
+          time='10am'
+        />{' '}
+        <EmailRow
+          title='jay jay'
+          subject='check check'
+          message='chechk check check'
+          time='10am'
+        />{' '}
+        <EmailRow
+          title='jay jay'
+          subject='check check'
+          message='chechk check check'
+          time='10am'
+        />{' '}
+        <EmailRow
+          title='jay jay'
+          subject='check check'
+          message='chechk check check'
+          time='10am'
+        />{' '}
+        <EmailRow
+          title='jay jay'
+          subject='check check'
+          message='chechk check check'
+          time='10am'
+        />{' '}
+        <EmailRow
+          title='jay jay'
+          subject='check check'
+          message='chechk check check'
+          time='10am'
+        />{' '}
+        <EmailRow
+          title='jay jay'
+          subject='check check'
+          message='chechk check check'
+          time='10am'
+        />{' '}
+        <EmailRow
+          title='jay jay'
+          subject='check check'
+          message='chechk check check'
+          time='10am'
+        />{' '}
+        <EmailRow
+          title='jay jay'
+          subject='check check'
+          message='chechk check check'
+          time='10am'
+        />{' '}
+        <EmailRow
+          title='jay jay'
+          subject='check check'
+          message='chechk check check'
+          time='10am'
+        />
       </div>
     </div>
   );

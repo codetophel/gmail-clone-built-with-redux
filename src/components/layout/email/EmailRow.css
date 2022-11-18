@@ -3,7 +3,6 @@
   align-items: center;
   height: 50px;
   border-bottom: 1px solid whitesmoke;
-  position: sticky;
   z-index: 999;
   cursor: pointer;
 }
