@@ -8,3 +8,13 @@ This project was created with [Create React App](https://github.com/codetophel/g
   The modal displays a form where you can send mail to recipients. Submission of the form automatically closes the modal and displays the sent mail in the mails on the homepage.
 
 - Clicking on any mail takes you to the mail page directly.
+
+Technologies used
+
+- Reactjs
+- Redux for state management
+- Firebase database
+- Material Ui
+- React hook form for form validation
+- Firebase google authenication for login feature
+- Css
