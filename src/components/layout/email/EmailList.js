@@ -13,7 +13,7 @@ import KeyboardHideIcon from '@mui/icons-material/KeyboardHide';
 import Section from './Section';
 import EmailRow from './EmailRow';
 import { db } from '../../../db/firebase';
-import { getDocs, collection } from 'firebase/firestore';
+import { getDocs, collection, orderBy, query } from 'firebase/firestore';
 import './EmailList.css';
 
 const EmailList = () => {
@@ -21,7 +21,9 @@ const EmailList = () => {
   const [loading, setLoading] = useState(false);
 
   const getEmails = async () => {
-    await getDocs(collection(db, 'emails')).then((snapshot) => {
+    await getDocs(
+      query(collection(db, 'emails'), orderBy('timestamp', 'desc'))
+    ).then((snapshot) => {
       let allMails = [];
       snapshot.docs.map((doc) => {
         allMails.push({ id: doc.id, data: doc.data() });
